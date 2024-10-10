@@ -4,7 +4,7 @@ Project Proposal
 •	Chosen Topic: The effects of remote work on mental health.
 •	Rationale: With the rise of remote work due to the pandemic, understanding its impact on mental health is crucial for both employees and employers. This topic addresses a relevant social issue and has significant implications for workplace policies and practices.
 Dataset Finding
-•	Dataset Source: Kaggle (e.g., Remote Work and Mental Health Dataset).
+•	Dataset Source: Kaggle (e.g., Remote Work and Mental Health Dataset: https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health).
 •	Metadata Screenshot: 
  
 Inspiration and Visualization Ideas
