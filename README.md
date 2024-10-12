@@ -1,26 +1,49 @@
-# Project-3
+ # Project Proposal: Mental Health in a Remote World: A Data-Driven Analysis
 
-Project Proposal
-•	Chosen Topic: The effects of remote work on mental health.
-•	Rationale: With the rise of remote work due to the pandemic, understanding its impact on mental health is crucial for both employees and employers. This topic addresses a relevant social issue and has significant implications for workplace policies and practices.
-Dataset Finding
-•	Dataset Source: Kaggle (e.g., Remote Work and Mental Health Dataset: https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health).
-•	Metadata Screenshot: 
- 
-Inspiration and Visualization Ideas
-1.	Visualization 1: A bar chart showing average stress levels by job type.
- 
+## Overview
+This project aims to analyze the impact of remote work on mental health using a dataset sourced from Kaggle. The focus will be on understanding how various factors, such as job role, work location, and stress levels, influence employees' mental well-being. Through data cleaning, analysis, and visualization, we will derive insights that can help organizations better support their remote workforce.
 
-2.	Visualization 2: A heat map illustrating correlations between work-life balance and mental health ratings.
- 
+## Objectives
+1. **Identify trends in mental health conditions across different job roles.**
+2. **Examine the relationship between work-life balance and work location.**
+3. **Analyze how stress levels affect productivity changes among employees.**
 
-3.	Visualization 3: A line graph tracking changes in mental health ratings over time (if longitudinal data is available).
- 
+## Data Source
+The dataset used for this analysis is available on Kaggle: [Remote Work and Mental Health](https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health).
+
+## Visualizations
+
+### 1. Mental Health Condition by Job Role
+- **Type**: Bar chart
+- **Library**: Plotly
+- **Interaction**: Dropdown to filter by specific job roles.
+- **Description**: This visualization will display the distribution of mental health conditions (e.g., anxiety, depression) across various job roles. Users can select specific roles from a dropdown menu to focus on the mental health challenges faced by employees in those positions.
+
+### 2. Work-Life Balance vs. Work Location
+- **Type**: Box plot
+- **Library**: hvplot or Matplotlib
+- **Interaction**: Users can select specific work locations to view.
+- **Description**: This box plot will illustrate the work-life balance ratings across different work locations (remote, hybrid, onsite). By allowing users to filter by location, we can identify trends and disparities in work-life balance perceptions.
+
+### 3. Stress Levels and Productivity Change
+- **Type**: Scatter plot with trend line
+- **Library**: Plotly
+- **Interaction**: Allow users to filter by age group or gender.
+- **Description**: This scatter plot will showcase the correlation between stress levels and changes in productivity. Users will be able to filter the data by age group or gender to uncover insights about how these demographics experience stress and its impact on their work performance.
+
+## Methodology
+1. **Data Cleaning**: The dataset will undergo cleaning to handle missing values, remove duplicates, and convert data types.
+2. **Exploratory Data Analysis**: Initial analysis will be performed to understand data distributions and relationships between variables.
+3. **Visualization Development**: Interactive visualizations will be created using Plotly and hvplot or Matplotlib to facilitate user engagement and insights.
+
+## Ethical Considerations
+We will ensure that all data handling and analysis uphold ethical standards. This includes maintaining privacy and confidentiality for any identifiable information and being mindful of how our findings could impact perceptions of mental health in the workplace.
+
+## References
+- Kaggle Dataset: [Remote Work and Mental Health](https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health)
+- Plotly Documentation: [Plotly](https://plotly.com/python/)
+- hvplot Documentation: [hvplot](https://hvplot.holoviz.org/)
+- Matplotlib Documentation: [Matplotlib](https://matplotlib.org/)
+
 
  
-Sketching Visuals
-HTML menus and dropdowns significantly enhance user interaction in our project on remote work and mental health by allowing personalized exploration of data. Users can select specific categories, such as job types or stress levels, enabling them to focus on the insights most relevant to their experiences. This targeted approach not only makes the data exploration more meaningful but also facilitates dynamic visualizations that update in real time based on user selections. For instance, choosing "Tech" from a dropdown can instantly refresh charts to show average stress levels specific to that job type.
-Additionally, structured menus simplify navigation, providing a user-friendly experience that caters to individuals with varying levels of technical expertise. This guided interaction allows users to easily cross-analyze different factors, such as comparing trends over time or viewing stress levels across various sectors. Overall, these interactive elements foster deeper engagement, enabling users to gain valuable insights into how remote work impacts mental health in an accessible and meaningful way.
-
-GitHub Repository
-•	https://github.com/AzaniaHH/Project-3 
