@@ -6,6 +6,9 @@ This project explores the differences between **remote** and **onsite** work wit
 
 The main goal is to allow users to compare the effects of remote, onsite, and hybrid work environments on mental health, social isolation, and work-life balance. The project offers a clean and intuitive interface where users can choose the work location and explore visualized insights across multiple metrics.
 
+Ethical Considerations 
+  In our analysis, we made sure to handle mental health data with care, recognizing the sensitive nature of conditions like anxiety and depression. We have used anonymized data to protect individual identities and have taken care not to make assumptions about cause and effec
+
 ## Project Features
 
 - **Interactive Dashboard**: Users can filter visualizations based on work location (Remote, Onsite, Hybrid).
@@ -50,8 +53,7 @@ First, install the necessary Python packages using `pip`:
 ```bash
 pip install flask dash pandas plotly pymongo
 
-# Ethical Considerations 
-  In our analysis, we made sure to handle mental health data with care, recognizing the sensitive nature of conditions like anxiety and depression. We have used anonymized data to protect individual identities and have taken care not to make assumptions about cause and effect.
+t.
 
 
  
