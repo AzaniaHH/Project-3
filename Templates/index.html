@@ -1,3 +1,96 @@
+// Initialize the dashboard
+function init() {
+  // Fetch the data from the Flask API
+  d3.json("/data").then((data) => {
+
+    // Get a list of unique employee IDs
+    const employeeIDs = data.map(d => d.id);
+
+    // Select the dropdown and populate it with the employee IDs
+    const dropdown = d3.select("#selDataset");
+    employeeIDs.forEach(id => {
+      dropdown.append("option").text(id).property("value", id);
+    });
+
+    // Build initial charts and metadata for the first employee
+    const firstID = employeeIDs[0];
+    buildCharts(firstID);
+    buildMetadata(firstID);
+  });
+}
+
+// Function to build the metadata panel
+function buildMetadata(employeeID) {
+  d3.json("/data").then((data) => {
+    const result = data.find(d => d.id == employeeID);
+    const metadataPanel = d3.select("#sample-metadata");
+
+    // Clear existing metadata
+    metadataPanel.html("");
+
+    // Append key-value pairs
+    Object.entries(result).forEach(([key, value]) => {
+      metadataPanel.append("h6").text(`${key}: ${value}`);
+    });
+  });
+}
+
+// Function to build the charts
+function buildCharts(employeeID) {
+  d3.json("/data").then((data) => {
+    const result = data.find(d => d.id == employeeID);
+
+    // Bar chart data
+    const barData = [
+      {
+        x: result.stress_level,  // Customize based on your dataset
+        y: result.work_life_balance,  // Customize based on your dataset
+        type: "bar",
+        orientation: "h"
+      }
+    ];
+
+    const barLayout = {
+      title: "Work-Life Balance vs. Stress Level"
+    };
+
+    Plotly.newPlot("bar", barData, barLayout);
+
+    // Bubble chart data
+    const bubbleData = [
+      {
+        x: result.hours_worked,  // Customize based on your dataset
+        y: result.stress_level,  // Customize based on your dataset
+        text: result.mental_health_condition,  // Customize based on your dataset
+        mode: "markers",
+        marker: {
+          size: result.stress_level,  // Size based on stress level
+          color: result.hours_worked,  // Color based on hours worked
+          colorscale: "Earth"
+        }
+      }
+    ];
+
+    const bubbleLayout = {
+      title: "Hours Worked vs Stress Level",
+      xaxis: { title: "Hours Worked" },
+      yaxis: { title: "Stress Level" }
+    };
+
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+  });
+}
+
+// Function called when the dropdown is changed
+function optionChanged(newID) {
+  buildMetadata(newID);
+  buildCharts(newID);
+}
+
+// Initialize the dashboard
+init();
+
+
 
 
 
