@@ -53,7 +53,6 @@ First, install the necessary Python packages using `pip`:
 ```bash
 pip install flask dash pandas plotly pymongo
 
-t.
 
 
  
