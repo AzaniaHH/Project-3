@@ -1,49 +1,55 @@
- # Project Proposal: Mental Health in a Remote World: A Data-Driven Analysis
+# Remote Work vs Onsite Work: Analyzing Mental Health and Work-Life Balance
 
 ## Overview
-This project aims to analyze the impact of remote work on mental health using a dataset sourced from Kaggle. The focus will be on understanding how various factors, such as job role, work location, and stress levels, influence employees' mental well-being. Through data cleaning, analysis, and visualization, we will derive insights that can help organizations better support their remote workforce.
 
-## Objectives
-1. **Identify trends in mental health conditions across different job roles.**
-2. **Examine the relationship between work-life balance and work location.**
-3. **Analyze how stress levels affect productivity changes among employees.**
+This project explores the differences between **remote** and **onsite** work with respect to mental health, stress levels, work-life balance, and satisfaction. Using a dataset of 5,000 employees, the project visualizes key metrics that reflect the impact of work location on mental well-being and overall productivity. The analysis is presented via an interactive web dashboard built using **Flask** and **Dash**, powered by **Plotly** for interactive visualizations.
 
-## Data Source
-The dataset used for this analysis is available on Kaggle: [Remote Work and Mental Health](https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health).
+The main goal is to allow users to compare the effects of remote, onsite, and hybrid work environments on mental health, social isolation, and work-life balance. The project offers a clean and intuitive interface where users can choose the work location and explore visualized insights across multiple metrics.
 
-## Visualizations
+## Project Features
 
-### 1. Mental Health Condition by Job Role
-- **Type**: Bar chart
-- **Library**: Plotly
-- **Interaction**: Dropdown to filter by specific job roles.
-- **Description**: This visualization will display the distribution of mental health conditions (e.g., anxiety, depression) across various job roles. Users can select specific roles from a dropdown menu to focus on the mental health challenges faced by employees in those positions.
+- **Interactive Dashboard**: Users can filter visualizations based on work location (Remote, Onsite, Hybrid).
+- **Three Visualizations**:
+  1. **Stress Levels by Work Location**: Histogram comparing stress levels across different work setups.
+  2. **Work-Life Balance by Work Location**: Box plot to assess work-life balance for different work environments.
+  3. **Mental Health Conditions**: Pie chart showing the distribution of mental health conditions (e.g., depression, anxiety) among employees based on work location.
 
-### 2. Work-Life Balance vs. Work Location
-- **Type**: Box plot
-- **Library**: hvplot or Matplotlib
-- **Interaction**: Users can select specific work locations to view.
-- **Description**: This box plot will illustrate the work-life balance ratings across different work locations (remote, hybrid, onsite). By allowing users to filter by location, we can identify trends and disparities in work-life balance perceptions.
+The project uses MongoDB to store and query the dataset and uses Dash for building the interactive web interface.
 
-### 3. Stress Levels and Productivity Change
-- **Type**: Scatter plot with trend line
-- **Library**: Plotly
-- **Interaction**: Allow users to filter by age group or gender.
-- **Description**: This scatter plot will showcase the correlation between stress levels and changes in productivity. Users will be able to filter the data by age group or gender to uncover insights about how these demographics experience stress and its impact on their work performance.
+## Requirements
 
-## Methodology
-1. **Data Cleaning**: The dataset will undergo cleaning to handle missing values, remove duplicates, and convert data types.
-2. **Exploratory Data Analysis**: Initial analysis will be performed to understand data distributions and relationships between variables.
-3. **Visualization Development**: Interactive visualizations will be created using Plotly and hvplot or Matplotlib to facilitate user engagement and insights.
+To run this project locally, you'll need the following dependencies:
 
-## Ethical Considerations
-We will ensure that all data handling and analysis uphold ethical standards. This includes maintaining privacy and confidentiality for any identifiable information and being mindful of how our findings could impact perceptions of mental health in the workplace.
+- **Python 3.x**
+- **Flask**: `pip install flask`
+- **Dash**: `pip install dash`
+- **Pandas**: `pip install pandas`
+- **Plotly**: `pip install plotly`
+- **pymongo**: `pip install pymongo`
 
-## References
-- Kaggle Dataset: [Remote Work and Mental Health](https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health)
-- Plotly Documentation: [Plotly](https://plotly.com/python/)
-- hvplot Documentation: [hvplot](https://hvplot.holoviz.org/)
-- Matplotlib Documentation: [Matplotlib](https://matplotlib.org/)
+MongoDB should be installed and running on your system to store and query the dataset.
+
+## Dataset
+
+The dataset used for this project was sourced from [Kaggle: Remote Work and Mental Health](https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health). It contains information on 5,000 employees, including their work location, mental health conditions, stress levels, and productivity changes.
+
+### Dataset Attributes
+
+- **Employee_ID**: Unique identifier for each employee.
+- **Age**, **Gender**, **Job_Role**, **Industry**: Demographic data.
+- **Work_Location**: Type of work location (Remote, Onsite, Hybrid).
+- **Work_Life_Balance_Rating**: Rating of work-life balance (1 to 5 scale).
+- **Stress_Level**: Categorical variable indicating employee stress levels (Low, Medium, High).
+- **Mental_Health_Condition**: Information on any mental health conditions (Anxiety, Depression, None).
+- **Productivity_Change**: How the employee's productivity changed due to work location (Increase, Decrease, No Change).
+
+## Running the Project
+
+### Step 1: Install Dependencies
+First, install the necessary Python packages using `pip`:
+```bash
+pip install flask dash pandas plotly pymongo
+
 
 
  
