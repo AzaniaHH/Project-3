@@ -50,6 +50,8 @@ First, install the necessary Python packages using `pip`:
 ```bash
 pip install flask dash pandas plotly pymongo
 
+# Ethical Considerations 
+  In our analysis, we made sure to handle mental health data with care, recognizing the sensitive nature of conditions like anxiety and depression. We have used anonymized data to protect individual identities and have taken care not to make assumptions about cause and effect.
 
 
  
